@@ -13,3 +13,9 @@ botao.addEventListener('click', function(){
 })
 
 
+//Tipos primitivos (tipagem estática)
+
+let nome: string = 'Rafa';
+let idade: number = 23; 
+let programador: boolean = true
+
