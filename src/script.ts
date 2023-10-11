@@ -22,3 +22,4 @@ let programador: boolean = true
 //tipagem Arrays
 let nomes: string[] = ['Rafa', 'Ana', 'Pedro'];
 
+let nomes2: any[] = ['Rafa', 23, true];
