@@ -19,3 +19,6 @@ let nome: string = 'Rafa';
 let idade: number = 23; 
 let programador: boolean = true
 
+//tipagem Arrays
+let nomes: string[] = ['Rafa', 'Ana', 'Pedro'];
+
