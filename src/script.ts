@@ -32,3 +32,16 @@ function firstLetterUpperCase(name: string): string{
 }
 
 firstLetterUpperCase('rafa');
+
+//object 
+
+function resumo(usuario: {name: string, idade: number}){
+    return `Olá, ${usuario.name} você tem ${usuario.idade} anos`;
+}
+
+let u = {
+    name: 'Rafael',
+    idade: 23
+};
+
+console.log(resumo(u));
