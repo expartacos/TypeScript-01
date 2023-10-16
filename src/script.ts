@@ -23,3 +23,12 @@ let programador: boolean = true
 let nomes: string[] = ['Rafa', 'Ana', 'Pedro'];
 
 let nomes2: any[] = ['Rafa', 23, true];
+
+//Parametros / funções 
+
+function firstLetterUpperCase(name: string){
+    let firstlleter = name.charAt(0).toUpperCase();
+    return firstlleter + name.substring(1);
+}
+
+firstLetterUpperCase('rafa');
