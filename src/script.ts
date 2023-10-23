@@ -83,6 +83,7 @@ function mostrarTexto(
 ) { 
     //só é possivel alinhar com 'left', 'right' e 'center' outro nome que eu colocar o type 
     //script não aceita
+    return `<div style="text-align: ${alinhamento}">${texto}</div>`
 }
 
 mostrarTexto('rafael', 'center');
