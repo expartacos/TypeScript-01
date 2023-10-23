@@ -34,10 +34,14 @@ function firstLetterUpperCase(name: string): string{
 firstLetterUpperCase('rafa');
 
 //object 
-
-function resumo(usuario: {name: string, idade: number}){
+//a ? serve para dizer q uma variavel/propriedade é opcional.
+ type User = {
+    name: string,
+    idade: number
+ };
+function resumo(usuario: User){
     return `Olá, ${usuario.name} você tem ${usuario.idade} anos`;
-}
+};
 
 let u = {
     name: 'Rafael',
@@ -45,3 +49,42 @@ let u = {
 };
 
 console.log(resumo(u));
+
+//multiplos types
+
+let idades: string | number = 202;
+
+idades = '202';
+
+function mostrarIdade(idade: string | number){
+    return console.log("Minha idade é:" +idade);   
+}
+
+//type interface
+//interface da pra extender os tipos se for preciso 
+
+type Idade = string | number;
+
+let i: Idade = 20;
+let b: Idade = "20";
+
+interface Ira {
+    nome: string,
+    idade: number
+}
+
+//types literais 
+
+let nomeq: 'rafael' = 'rafael';
+
+function mostrarTexto(
+    texto: string, 
+    alinhamento: 'left' | 'right' | 'center'
+) { 
+    //só é possivel alinhar com 'left', 'right' e 'center' outro nome que eu colocar o type 
+    //script não aceita
+}
+
+mostrarTexto('rafael', 'center');
+mostrarTexto('rafael', 'left');
+mostrarTexto('rafael', 'right');
