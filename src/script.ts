@@ -89,3 +89,21 @@ function mostrarTexto(
 mostrarTexto('rafael', 'center');
 mostrarTexto('rafael', 'left');
 mostrarTexto('rafael', 'right');
+
+
+//inferência literal 
+
+function fazerrequisicao(url: string, method: 'GET' | 'POST'){
+    //...
+}
+
+type methotds = {
+    url: string,
+    method: 'GET' | 'POST'
+}
+let req: methotds = {
+    url: 'https://...',
+    method: 'GET'
+};
+
+fazerrequisicao(req.url, req.method);
