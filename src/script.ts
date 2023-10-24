@@ -107,3 +107,14 @@ let req: methotds = {
 };
 
 fazerrequisicao(req.url, req.method);
+
+
+//types em funções 
+
+type mathFunction = (n1: number, n2: number) => number;
+
+const somar: mathFunction = (n1, n2) => {
+    return n1 + n2;
+}
+
+somar(2, 3);
