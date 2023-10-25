@@ -4,11 +4,11 @@ let botao = document.getElementById('calcular') as HTMLOutputElement;
 let res = document.getElementById('result') as HTMLOutputElement;
 
 
-function calcular (n1: number, n2: number){
-        return n1 + n2;
-}
+function nsei (n10: number, n20: number): number{
+        return n10 + n20;
+};
 botao.addEventListener('click', function(){
-    res.innerHTML = calcular(parseInt(num1.value), parseInt(num2.value)).toString();
+    res.innerHTML = nsei(parseInt(num1.value), parseInt(num2.value)).toString();
 
 })
 
@@ -121,8 +121,13 @@ somar(2, 3);
 
 //Retorno void "quando uma função compri o papel dela mas ela não tem nenhum tipo de retorno"
 
-function removeElemento(el: HTMLElement): void{
+function removeEl(el: HTMLElement): void{
     el.remove();
 }
 
-removeElemento( document.getElementById('teste') as HTMLElement);
+removeEl( document.getElementById('teste') as HTMLElement);
+
+
+//watchMode
+
+let algo: string = 'rafa';
