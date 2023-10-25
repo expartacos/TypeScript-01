@@ -118,3 +118,11 @@ const somar: mathFunction = (n1, n2) => {
 }
 
 somar(2, 3);
+
+//Retorno void "quando uma função compri o papel dela mas ela não tem nenhum tipo de retorno"
+
+function removeElemento(el: HTMLElement): void{
+    el.remove();
+}
+
+removeElemento( document.getElementById('teste') as HTMLElement);
