@@ -1,71 +1,133 @@
-var num1 = document.getElementById('numero1');
-var num2 = document.getElementById('numero2');
-var botao = document.getElementById('calcular');
-var res = document.getElementById('result');
-function nsei(n10, n20) {
-    return n10 + n20;
-}
-;
-botao.addEventListener('click', function () {
+/*let num1 = document.getElementById('numero1') as HTMLInputElement;
+let num2 = document.getElementById('numero2') as HTMLInputElement;
+let botao = document.getElementById('calcular') as HTMLOutputElement;
+let res = document.getElementById('result') as HTMLOutputElement;
+
+
+function nsei (n10: number, n20: number): number{
+        return n10 + n20;
+};
+botao.addEventListener('click', function(){
     res.innerHTML = nsei(parseInt(num1.value), parseInt(num2.value)).toString();
-});
+
+})
+
+
 //Tipos primitivos (tipagem estática)
-var nome = 'Rafa';
-var idade = 23;
-var programador = true;
+
+let nome: string = 'Rafa';
+let idade: number = 23;
+let programador: boolean = true
+
 //tipagem Arrays
-var nomes = ['Rafa', 'Ana', 'Pedro'];
-var nomes2 = ['Rafa', 23, true];
-//Parametros / funções 
-function firstLetterUpperCase(name) {
-    var firstlleter = name.charAt(0).toUpperCase();
+let nomes: string[] = ['Rafa', 'Ana', 'Pedro'];
+
+let nomes2: any[] = ['Rafa', 23, true];
+
+//Parametros / funções
+
+function firstLetterUpperCase(name: string): string{
+    let firstlleter = name.charAt(0).toUpperCase();
     return firstlleter + name.substring(1);
 }
+
 firstLetterUpperCase('rafa');
-function resumo(usuario) {
-    return "Ol\u00E1, ".concat(usuario.name, " voc\u00EA tem ").concat(usuario.idade, " anos");
-}
-;
-var u = {
+
+//object
+//a ? serve para dizer q uma variavel/propriedade é opcional.
+ type User = {
+    name: string,
+    idade: number
+ };
+function resumo(usuario: User){
+    return `Olá, ${usuario.name} você tem ${usuario.idade} anos`;
+};
+
+let u = {
     name: 'Rafael',
     idade: 23
 };
+
 console.log(resumo(u));
+
 //multiplos types
-var idades = 202;
+
+let idades: string | number = 202;
+
 idades = '202';
-function mostrarIdade(idade) {
-    return console.log("Minha idade é:" + idade);
+
+function mostrarIdade(idade: string | number){
+    return console.log("Minha idade é:" +idade);
 }
-var i = 20;
-var b = "20";
-//types literais 
-var nomeq = 'rafael';
-function mostrarTexto(texto, alinhamento) {
-    //só é possivel alinhar com 'left', 'right' e 'center' outro nome que eu colocar o type 
+
+//type interface
+//interface da pra extender os tipos se for preciso
+
+type Idade = string | number;
+
+let i: Idade = 20;
+let b: Idade = "20";
+
+interface Ira {
+    nome: string,
+    idade: number
+}
+
+//types literais
+
+let nomeq: 'rafael' = 'rafael';
+
+function mostrarTexto(
+    texto: string,
+    alinhamento: 'left' | 'right' | 'center'
+) {
+    //só é possivel alinhar com 'left', 'right' e 'center' outro nome que eu colocar o type
     //script não aceita
-    return "<div style=\"text-align: ".concat(alinhamento, "\">").concat(texto, "</div>");
+    return `<div style="text-align: ${alinhamento}">${texto}</div>`
 }
+
 mostrarTexto('rafael', 'center');
 mostrarTexto('rafael', 'left');
 mostrarTexto('rafael', 'right');
-//inferência literal 
-function fazerrequisicao(url, method) {
+
+
+//inferência literal
+
+function fazerrequisicao(url: string, method: 'GET' | 'POST'){
     //...
 }
-var req = {
+
+type methotds = {
+    url: string,
+    method: 'GET' | 'POST'
+}
+let req: methotds = {
     url: 'https://...',
     method: 'GET'
 };
+
 fazerrequisicao(req.url, req.method);
-var somar = function (n1, n2) {
+
+
+//types em funções
+
+type mathFunction = (n1: number, n2: number) => number;
+
+const somar: mathFunction = (n1, n2) => {
     return n1 + n2;
-};
+}
+
 somar(2, 3);
+
 //Retorno void "quando uma função compri o papel dela mas ela não tem nenhum tipo de retorno"
-function removeEl(el) {
+
+function removeEl(el: HTMLElement): void{
     el.remove();
 }
-removeEl(document.getElementById('teste'));
+
+removeEl( document.getElementById('teste') as HTMLElement);
+
+
 //watchMode
-var algo = 'rafa';
+
+let algo: string = 'rafa';*/

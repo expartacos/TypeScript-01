@@ -1,4 +1,4 @@
-let num1 = document.getElementById('numero1') as HTMLInputElement;
+/*let num1 = document.getElementById('numero1') as HTMLInputElement;
 let num2 = document.getElementById('numero2') as HTMLInputElement;
 let botao = document.getElementById('calcular') as HTMLOutputElement;
 let res = document.getElementById('result') as HTMLOutputElement;
@@ -130,4 +130,5 @@ removeEl( document.getElementById('teste') as HTMLElement);
 
 //watchMode
 
-let algo: string = 'rafa';
+let algo: string = 'rafa';*/
+
